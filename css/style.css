@@ -244,6 +244,23 @@ header{
 	height:100%;
 }
 
+/* About */
+/* =================================================================== */
+
+#about-header{
+	height: 45vh;
+	padding: 55px 0 1px;
+}
+
+#about-header__image-container{
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
 /* =================================================================== */
 /* =================================================================== */
 /* MEDIA QUERIES */

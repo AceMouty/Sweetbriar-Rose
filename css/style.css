@@ -1,0 +1,338 @@
+
+
+*{
+	box-sizing: border-box;
+	color: rgb(1, 1, 37);
+}
+
+body{
+	background: #f1f1f1;
+}
+
+header{
+  padding: 156px 0 1px;
+}
+
+#menus{
+	padding: 70px 0px 0px 0px;
+}
+
+/* =================================================================== */
+/* =================================================================== */
+/* Utility Classes */
+
+/* Services Classes */
+#services .services__image-container{
+	padding: 0px;
+}
+
+#services .services__text-container h1{
+	text-align: center;
+}
+
+
+#services .services__text-container div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+
+}
+
+/* Services Buttons */
+#services .services__text-container div .btn-primary{
+	background-color: #970038;
+	border-color: #970038;
+}
+
+#services .services__text-container div .btn-primary:hover{
+	background-color: #E50055;
+	border-color: #E50055;
+	box-shadow: -5px 4px 8px #888;
+}
+
+
+
+
+
+/* HOME PAGE */
+
+/* =================================================================== */
+/* =================================================================== */
+/* Navbar */
+
+/* #EFCEDF */
+#mainNav a{
+	color:#EFCEDF;
+}
+
+#navbarResponsive a{
+	color: #EC5A90;
+}
+
+#navbarDropdown a:hover{
+	color:#EFCEDF;
+	background: #EC5A90;
+}
+
+.dropdown:hover>.dropdown-menu{
+	display: block;
+}
+
+
+/* =================================================================== */
+/* =================================================================== */
+/* Header */
+#header{
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(242,41,91,0.6)),
+	url('../img/Showcase\ Img.jpg') center center/cover fixed;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+/* =================================================================== */
+/* =================================================================== */
+/* Testimonials */
+
+#testimonials{
+	height: 38vh;
+	position: relative;
+	background:#f1f1f1;
+}
+
+#testimonials div div div div p{
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+/* =================================================================== */
+/* =================================================================== */
+/* Footer Info */
+
+
+#footer-info ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+
+#footer-info ul li{
+	color: white;
+}
+
+/* Menu */
+/* =================================================================== */
+/* =================================================================== */
+
+/* Menus Tab */
+#menus a{
+	color: #970038;
+	font-weight: 500;
+}
+
+#menus-tabContent{
+	/* height: 80vh; */
+	padding-top: 15px;
+	text-align: center;
+}
+
+#menus-tabContent ul{
+	list-style: none;
+	padding: 0;
+	font-size: 1.2em;
+	font-weight: 600;
+	font-family: 'Raleway';
+	text-align: center;
+}
+
+/* Services */
+/* ==================================================================== */
+/* ==================================================================== */
+
+#services-header{
+	background: linear-gradient(rgba(0,0,0,0.9), rgba(255,255,255,0.2)) ,
+	url('../img/Services.png') center center/cover;
+	height: 45vh;
+	padding: 55px 0 1px;
+}
+
+#services-header__container h1,
+#services-header__container p{
+	color: white;
+}
+
+#services-header__container{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Raleway';
+	font-weight: 600;
+}
+
+#services-text__container{
+	padding: 20px 0;
+}
+
+#services-text__paragraph{
+	font-size: 1.5em;
+}
+
+#services-items{
+	padding-bottom: 20px;
+}
+
+#services-items__container h5{
+	text-align: center;
+}
+
+
+
+/* Contact */
+/* ========================================================================== */
+
+#contact-header{
+	padding: 55px 0 1px;
+	height: 40vh;
+}
+
+#contact-header__image-container{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background-color: white;
+	position: relative;
+}
+
+#contact-header__image-container{
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+#contact-information__container{
+	padding: 20px 0;
+	height: 60vh;
+}
+
+#contact-information__container .row{
+	height: 100%;
+}
+
+#contact-information__container .contact-information__text{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Raleway';
+	font-weight: 600;
+}
+
+#contact-information__container .contact-information__text ul li{
+	font-size: 1.3em;
+}
+
+#map
+{
+	width:100%;
+	height:100%;
+}
+
+/* =================================================================== */
+/* =================================================================== */
+/* MEDIA QUERIES */
+
+/* Home Page Testimonials */
+@media only screen and (max-width: 1730px){
+	#testimonials{
+		height: 48vh;
+	}
+}
+
+/* Home Page Services seciton */
+@media only screen and (max-width: 992px){
+	
+	#testimonials{
+		display: none;
+	}
+
+	#services .row{
+		padding: 10px 0;
+	}
+	
+	#services .services__text-container{
+		padding: 0;
+		width: 100%;
+		height: 50vh;
+	}
+
+	#wine-taste__text{
+		background: linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
+		url('../img/Wine\ Taste.png') center center/cover;
+	}
+
+	#beer-taste__text{
+		background:  linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
+		url('../img/Beer\ Taste.png') center center/cover;
+	}
+
+	#lunch__text{
+		background:  linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
+		url('../img/Sandwhich\ and\ Beer.png') center center/cover;
+	}
+
+	#coffee__text{
+		background:  linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
+		url('../img/Coffee\ and\ Pastries.png') center center/cover;
+	}
+
+	#wine-taste__text h2,
+	#beer-taste__text h2,
+	#lunch__text h2,
+	#coffee__text h2{
+		color: white;
+	}
+
+	#services .services__text-container div p{
+		color: white;
+		padding: 0 10px;
+	}
+
+	#services .services__image-container{
+		display: none;
+	}
+
+	/* Services Page*/
+	#services-text{
+		margin-bottom: 30px;
+		padding: 0 12px;
+	}
+
+	#services-items{
+		margin-bottom: 30px;
+	
+	}
+}
+
+/* Menus Tab content */
+@media(min-width: 768px){
+	#services-items{
+		height: 40vh;
+	}
+
+	#services-items__contianer{
+		height: 30vh;
+	}
+
+	#services-items__contianer.card{
+		height: 30vh;
+	}
+
+}
+

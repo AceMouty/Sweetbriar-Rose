@@ -261,6 +261,15 @@ header{
 	height: 100%;
 }
 
+#about-text__container h2{
+	padding: 15px 0;
+	text-align: center;
+}
+
+#about-text__container p{
+	padding-bottom: 5px;
+}
+
 /* =================================================================== */
 /* =================================================================== */
 /* MEDIA QUERIES */

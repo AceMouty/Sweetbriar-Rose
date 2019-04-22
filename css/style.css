@@ -21,6 +21,16 @@ header{
 /* =================================================================== */
 /* Utility Classes */
 
+/* Phone numbers */
+.phone-number{
+	color: rgb(1, 1, 37);	
+}
+
+.phone-number:hover{
+	color: rgb(1, 1, 37);
+	text-decoration: none;
+}
+
 /* Services Classes */
 #services .services__image-container{
 	padding: 0px;
@@ -197,7 +207,7 @@ header{
 	height: 40vh;
 }
 
-#contact-header__image-container{
+#contact-header__container{
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -205,7 +215,7 @@ header{
 	position: relative;
 }
 
-#contact-header__image-container{
+#contact-header__container{
 	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8)),
 	url('../img/Store-front.png') center center/cover;
 	display: flex;

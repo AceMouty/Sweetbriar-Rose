@@ -1,4 +1,5 @@
 
+/* Basic CSS Setup */
 
 *{
 	box-sizing: border-box;
@@ -18,8 +19,9 @@ header{
 }
 
 /* =================================================================== */
-/* =================================================================== */
 /* Utility Classes */
+/* =================================================================== */
+
 
 /* Phone numbers */
 .phone-number{
@@ -66,13 +68,12 @@ header{
 
 
 
+/* =================================================================== */
 /* HOME PAGE */
+/* =================================================================== */
 
-/* =================================================================== */
-/* =================================================================== */
 /* Navbar */
 
-/* #EFCEDF */
 #mainNav a{
 	color:#EFCEDF;
 }
@@ -81,9 +82,8 @@ header{
 	color: #EC5A90;
 }
 
-#navbarDropdown a:hover{
-	color:#EFCEDF;
-	background: #EC5A90;
+.dropdown-item:active{
+	background-color: #EFCEDF;
 }
 
 .dropdown:hover>.dropdown-menu{
@@ -91,19 +91,20 @@ header{
 }
 
 
-/* =================================================================== */
-/* =================================================================== */
+
 /* Header */
+
+
 #header{
 	background: linear-gradient(rgba(0,0,0,0.6), rgba(242,41,91,0.6)),
-	url('../img/Showcase\ Img.jpg') center center/cover fixed;
+	url('../img/Showcase\ Img.jpg') right center/cover fixed;
 	height: 100vh;
 	display: flex;
 	align-items: center;
 }
 
-/* =================================================================== */
-/* =================================================================== */
+
+
 /* Testimonials */
 
 #testimonials{
@@ -117,10 +118,17 @@ header{
 	font-weight: 600;
 }
 
-/* =================================================================== */
-/* =================================================================== */
-/* Footer Info */
 
+/* Services */
+
+#services p{
+	max-width: 80%;
+	text-align: center;
+}
+
+
+
+/* Footer Info */
 
 #footer-info ul{
 	list-style: none;
@@ -132,8 +140,12 @@ header{
 	color: white;
 }
 
-/* Menu */
+
+
+
+
 /* =================================================================== */
+/* Menus */
 /* =================================================================== */
 
 /* Menus Tab */
@@ -156,8 +168,9 @@ header{
 	text-align: center;
 }
 
-/* Services */
+
 /* ==================================================================== */
+/* Services */
 /* ==================================================================== */
 
 #services-header{
@@ -199,6 +212,8 @@ header{
 
 
 
+
+/* ========================================================================== */
 /* Contact */
 /* ========================================================================== */
 
@@ -211,7 +226,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	background-color: white;
+	color: white;
 	position: relative;
 }
 
@@ -232,7 +247,6 @@ header{
 
 #contact-information__container{
 	padding: 20px 0;
-	/* height: 60vh; */
 }
 
 #contact-information__container .row{
@@ -259,6 +273,13 @@ header{
 	height:100%;
 }
 
+#google_map{
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+/* =================================================================== */
 /* About */
 /* =================================================================== */
 
@@ -268,12 +289,13 @@ header{
 }
 
 #about-header__image-container{
-	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8));
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8)), url("../img/About.jpeg") right center/cover no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	height: 100%;
+	color: white;
 }
 
 #about-text__container h2{
@@ -285,9 +307,13 @@ header{
 	padding-bottom: 5px;
 }
 
-/* =================================================================== */
+
+
+
+
 /* =================================================================== */
 /* MEDIA QUERIES */
+/* =================================================================== */
 
 /* Home Page Testimonials */
 @media only screen and (max-width: 1730px){
@@ -295,6 +321,8 @@ header{
 		height: 48vh;
 	}
 }
+
+
 
 /* Home Page Services seciton */
 @media only screen and (max-width: 992px){
@@ -305,6 +333,14 @@ header{
 
 	#services .row{
 		padding: 10px 0;
+	}
+
+	#services .row:nth-child(1){
+		padding: 20px 0 10px 0;
+	}
+
+	#services .row:nth-child(4){
+		padding: 10px 0 20px 0;
 	}
 	
 	#services .services__text-container{
@@ -373,6 +409,27 @@ header{
 
 	#services-items__contianer.card{
 		height: 30vh;
+	}
+
+}
+
+@media(max-width: 557px){
+	#menus{
+		display: block;
+	}
+}
+
+@media(max-width: 320px){
+
+	#wine-taste__text div h2,
+	#beer-taste__text div h2,
+	#lunch__text div h2,
+	#coffee__text div h2{
+		margin-bottom: 20px;
+	}
+
+	.home__services-text{
+		display: none;
 	}
 
 }

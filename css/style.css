@@ -74,12 +74,26 @@ header{
 
 /* Navbar */
 
+/* #mainNav {
+	border: 3px solid orange;
+} */
+
+#mainNav .navbar-brand {
+	font-size: 2rem;
+	color: rgb(216, 216, 216)
+}
+
 #mainNav a{
 	color:#EFCEDF;
+	font-size: 1.4rem;
 }
 
 #navbarResponsive a{
-	color: #EC5A90;
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .dropdown-item:active{
@@ -91,20 +105,37 @@ header{
 }
 
 
-
-/* Header */
-
+/* =================================================================== */
+/* CTA */
 
 #header{
-	background: linear-gradient(rgba(0,0,0,0.6), rgba(242,41,91,0.6)),
+	background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
 	url('../img/Showcase\ Img.jpg') right center/cover fixed;
 	height: 100vh;
-	display: flex;
-	align-items: center;
+	/* border: 3px solid red; */
 }
 
+.cta-text {
+	font-size: 5rem;
+	margin-bottom: 4rem;
+	color:rgba(255, 255, 255, 0.9);
+}
 
+.cta-button {
+	/* border: 2px solid red; */
+	color: white;
+	background-color: #F5A7C7;
+	padding: .5rem 4rem;
+	font-size: 2.3rem;
+	text-align: center;
+}
 
+.cta-button:hover {
+	background-color: rgba(245, 167, 199, 0.8);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+/* =================================================================== */
 /* Testimonials */
 
 #testimonials{

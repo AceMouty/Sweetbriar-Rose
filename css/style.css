@@ -18,6 +18,9 @@ header{
 	padding: 70px 0px 0px 0px;
 }
 
+:root {
+	--sbr-pink: #F5A7C7;
+}
 /* =================================================================== */
 /* Utility Classes */
 /* =================================================================== */
@@ -121,20 +124,43 @@ header{
 	color:rgba(255, 255, 255, 0.9);
 }
 
-.cta-button {
+#header-showcase .cta-button {
 	/* border: 2px solid red; */
 	color: white;
-	background-color: #F5A7C7;
+	background-color: var(--sbr-pink);
 	padding: .5rem 4rem;
 	font-size: 2.3rem;
 	text-align: center;
 }
 
-.cta-button:hover {
+#header-showcase .cta-button:hover {
 	background-color: rgba(245, 167, 199, 0.8);
 	color: rgba(255, 255, 255, 0.9);
 }
 
+/* =================================================================== */
+/* About Section */
+.about-heading {
+	font-size: 5rem;
+}
+
+.about-text {
+	font-size: 2.5rem;
+	line-height: normal;
+}
+
+.about-btn {
+	color: white;
+	background-color: var(--sbr-pink);
+	padding: .5rem 4rem;
+	font-size: 2.3rem;
+	text-align: center;
+}
+
+.about-btn:hover {
+	background-color: rgba(245, 167, 199, 0.8);
+	color: rgba(255, 255, 255, 0.9);
+}
 /* =================================================================== */
 /* Testimonials */
 

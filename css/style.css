@@ -161,6 +161,63 @@ header{
 	background-color: rgba(245, 167, 199, 0.8);
 	color: rgba(255, 255, 255, 0.9);
 }
+
+/* =================================================================== */
+/* Menu Section */
+
+.card-img-container {
+	width: 500px;
+	height: 651px;
+}
+
+.responsive-img {
+	height: 467px;
+	max-width: 100%;
+	/* border: 3px solid orange; */
+}
+
+.card-btn {
+	border: 3px solid var(--sbr-pink);
+	width: 12rem;
+}
+
+.resize {
+	max-width: 100%;
+	height: 650px;
+}
+
+/* pink box */
+.card-img-container {
+	position: relative;
+}
+
+.card-img-container:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: var(--sbr-pink);
+	z-index: -1;
+	left: -25px;
+	top: -25px;
+}
+
+/* .wine-taste-card {
+	background: url("../img/Wine\ Taste.png");
+	background-position: center;
+} */
+
+/* .beer-taste-card {
+	background: url('../img/Beer-Top-Down.png');
+	object-fit: contain;
+} */
+/* .food-card {
+	background: url('../img/Sandwhich\ and\ Beer.png');
+	background-position: center;
+} */
+
+
+
 /* =================================================================== */
 /* Testimonials */
 

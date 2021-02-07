@@ -184,40 +184,37 @@
 		<div class="services-right-img custom-orders-img service-img"></div>
 	</div>
 
-	<!-- Misc Info -->
-	<section class="bg-dark container-fluid" id="footer-info">
-		<div class="row footer-info">
-			<div class="pt-5 col-md-4">
-				<h4 class="text-center text-white">Explore</h4>
-				<ul>
-					<li><a href="./html/about.html" class="text-white">Our Story</a></li>
-					<li><a href="./html/contact.html" class="text-white">Contact Us</a></li>
-					<li><a href="./html/services.html" class="text-white">Catering & Events</a></li>
-				</ul>
-			</div>
-			<div class="pt-5 col-md-4">
-				<h4 class="text-white text-center">Contact</h4>
-				<ul>
-					<li>9973 US-290, Fredricksburg, Tx 78624</li>
-					<li>T: <a class="text-white" href="tel: +1-830-307-2646"> (830) 307-2646</a></li>
-				</ul>
-			</div>
-			<div class="pt-5 col-md-4">
-				<h4 class="text-white text-center">About</h4>
-				<ul>
-					<li>THURSDAY: 10AM - 5PM</li>
-					<li>FRIDAY: 10AM - 5PM</li>
-					<li>SATURDAY: 9AM - 6PM</li>
-					<li>SUNDAY: 12PM - 5PM</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
 	<!-- Footer -->
-	<footer class="py-5 bg-dark">
-		<div class="">
-			<p class="m-0 text-center text-white">Copyright &copy; Sweetbriar Rose 2019</p>
+	<footer class="bg-dark text-white pb-3 pt-2">
+		<div class="cstm-container">
+			<div class="footer-content d-flex align-items-center">
+				<div class="logo"></div>
+				<div class="information">
+					<hr class="line-pink">
+					<div class="information-grid">
+						<div class="hours">
+							<p>Hours</p>
+							<ul>
+								<li>Thursday: 10AM - 5PM</li>
+								<li>Friday: 10AM - 5PM</li>
+								<li>Saturday: 9AM - 6PM</li>
+								<li>Sunday: 12PM - 5PM</li>
+							</ul>
+						</div>
+						<div class="contact">
+							<p>Contact</p>
+							<ul>
+								<li>Tel: (800) 8675-309</li>
+								<li>Email: janedoe@gmail.com</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="signatures d-flex justify-content-between">
+				<p>Copyright &copy; Sweetbriar Rose <span id="date"></span></p>
+				<p>Designed and Developed by Kyle Guerrero</p>
+			</div>
 		</div>
 	</footer>
 
@@ -231,6 +228,15 @@
 
 	<!-- Custom JavaScript for this theme -->
 	<script src="js/scrolling-nav.js"></script>
+
+	<!-- Grab year -->
+	<script>
+		const date = new Date();
+		const year = date.getFullYear();
+
+		const dateElm = document.getElementById("date");
+		dateElm.textContent = String(year);
+	</script>
 
 </body>
 

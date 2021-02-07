@@ -1,17 +1,16 @@
-
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 /* Basic CSS Setup */
 
 *{
 	box-sizing: border-box;
 	color: rgb(1, 1, 37);
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
 }
 
 body{
 	background: #f1f1f1;
-}
-
-header{
-  padding: 156px 0 1px;
 }
 
 #menus{
@@ -20,12 +19,18 @@ header{
 
 :root {
 	--sbr-pink: #F5A7C7;
+	--text-light: rgb(216, 216, 216);
 }
 /* =================================================================== */
 /* Utility Classes */
 /* =================================================================== */
 
-
+.cstm-container {
+	width: 85%;
+	max-width: 1335px;
+	margin: 0 auto;
+	/* border: 2px solid red; */
+}
 /* Phone numbers */
 .phone-number{
 	color: rgb(1, 1, 37);	
@@ -52,7 +57,19 @@ header{
 	align-items: center;
 	flex-direction: column;
 	height: 100%;
+}
 
+.sbr-btn-solid {
+	font-size: 2.3rem;
+	background-color: var(--sbr-pink);
+	color: white;
+	padding: .5rem 2rem;
+	text-align: center;
+}
+
+.sbr-btn-solid:hover {
+	background-color: rgba(245, 167, 199, 0.8);
+	color: rgba(255, 255, 255, 0.9);
 }
 
 /* Services Buttons */
@@ -76,14 +93,29 @@ header{
 /* =================================================================== */
 
 /* Navbar */
-
-/* #mainNav {
+/* 
+#mainNav {
 	border: 3px solid orange;
 } */
 
+/* .navbar {
+	top: .5rem;
+} */
+
+.nav-background {
+	background-color: rgba(0,0,0,0.9);
+}
+	/* check for backdrop support */
+	@supports (backdrop-filter: blur(.25rem)) {
+		.nav-background {
+		backdrop-filter: blur(.25rem);
+		background-color: rgba(0,0,0,0.7);
+		}
+	}
+
 #mainNav .navbar-brand {
 	font-size: 2rem;
-	color: rgb(216, 216, 216)
+	color: var(--text-light);
 }
 
 #mainNav a{
@@ -111,42 +143,67 @@ header{
 /* =================================================================== */
 /* CTA */
 
-#header{
+.cta-header{
 	background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
 	url('../img/Showcase\ Img.jpg') right center/cover fixed;
 	height: 100vh;
+	padding-top: 12rem;
 	/* border: 3px solid red; */
 }
 
 .cta-text {
-	font-size: 5rem;
-	margin-bottom: 4rem;
-	color:rgba(255, 255, 255, 0.9);
+	font-size: 7rem;
+	color: var(--text-light);
+	/* border: 3px solid orange; */
 }
 
-#header-showcase .cta-button {
+.cstm-container .cta-button:not([href]):not([tabindex]) {
 	/* border: 2px solid red; */
 	color: white;
 	background-color: var(--sbr-pink);
 	padding: .5rem 4rem;
 	font-size: 2.3rem;
 	text-align: center;
+	margin-top: 6rem;
 }
 
-#header-showcase .cta-button:hover {
+.cstm-container .cta-button.cta-button:not([href]):not([tabindex]):hover {
 	background-color: rgba(245, 167, 199, 0.8);
 	color: rgba(255, 255, 255, 0.9);
 }
 
 /* =================================================================== */
 /* About Section */
+
+.about-section {
+	margin-top: 8rem;
+	height: 100vh;
+	/* border: 2px solid red; */
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.right-block {
+	background-color: var(--sbr-pink);
+	height: 100%;
+	width: 25%;
+	top:0;
+	right:0;
+	position: absolute;
+}
+
+.about-content__container {
+	/* border: 2px solid orange; */
+	width: 100%;
+	z-index: 1;
+}
 .about-heading {
-	font-size: 5rem;
+	font-size: 6rem;
 }
 
 .about-text {
-	font-size: 2.5rem;
-	line-height: normal;
+	font-size: 2rem;
 }
 
 .about-btn {
@@ -165,15 +222,48 @@ header{
 /* =================================================================== */
 /* Menu Section */
 
-.card-img-container {
-	width: 500px;
-	height: 651px;
+.menus-section {
+	margin-top: 8rem;
+	/* border: 2px solid red; */
 }
 
-.responsive-img {
-	height: 467px;
-	max-width: 100%;
-	/* border: 3px solid orange; */
+.menu-collection {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	grid-gap: 9rem;
+}
+/* imgs */
+.wine-img {
+	background: url("../img/Wine\ Taste.png");
+}
+
+.beer-img {
+	background: url("../img/Beer-Top-Down.png");
+}
+
+.lunch-img {
+	background: url("../img/Sandwhich\ and\ Beer.png");
+}
+
+.coffee-img {
+	background: url("../img/Coffee\ and\ Pastries.png");
+}
+
+.card-img {
+	height: min(40rem, 45vw);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.banner {
+	background-color: rgba(0,0,0,0.75);
+	color: white;
+	position: absolute;
+	top: 4rem;
+	padding: .5rem 3rem;
+	padding-left: .5rem;
+	font-size: 2.5rem;
 }
 
 .card-btn {
@@ -183,368 +273,100 @@ header{
 
 .resize {
 	max-width: 100%;
-	height: 650px;
+	height: 751px;
+	object-fit: cover;
 }
 
 /* pink box */
-.card-img-container {
+.card-img{
 	position: relative;
 }
 
-.card-img-container:before {
+.card-img:before {
 	content: '';
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	background-color: var(--sbr-pink);
-	z-index: -1;
+	z-index: -4;
 	left: -25px;
 	top: -25px;
 }
 
-/* .wine-taste-card {
-	background: url("../img/Wine\ Taste.png");
-	background-position: center;
-} */
-
-/* .beer-taste-card {
-	background: url('../img/Beer-Top-Down.png');
-	object-fit: contain;
-} */
-/* .food-card {
-	background: url('../img/Sandwhich\ and\ Beer.png');
-	background-position: center;
-} */
-
-
-
-/* =================================================================== */
-/* Testimonials */
-
-#testimonials{
-	height: 38vh;
-	position: relative;
-	background:#f1f1f1;
-}
-
-#testimonials div div div div p{
-	font-size: 1.3em;
-	font-weight: 600;
-}
-
-
 /* Services */
-
-#services p{
-	max-width: 80%;
-	text-align: center;
+.services-section {
+	/* border: 3px solid red; */
+	margin-top: 8rem;
 }
 
-
-
-/* Footer Info */
-
-#footer-info ul{
-	list-style: none;
-	text-align: center;
-	padding: 0;
-}
-
-#footer-info ul li{
-	color: white;
-}
-
-
-
-
-
-/* =================================================================== */
-/* Menus */
-/* =================================================================== */
-
-/* Menus Tab */
-#menus a{
-	color: #970038;
-	font-weight: 500;
-}
-
-#menus-tabContent{
-	padding-top: 15px;
-	text-align: center;
-}
-
-#menus-tabContent ul{
-	list-style: none;
-	padding: 0;
-	font-size: 1.2em;
-	font-weight: 600;
-	font-family: 'Raleway';
-	text-align: center;
-}
-
-
-/* ==================================================================== */
-/* Services */
-/* ==================================================================== */
-
-#services-header{
-	background: linear-gradient(rgba(0,0,0,0.9), rgba(255,255,255,0.2)) ,
-	url('../img/Services.png') center center/cover;
-	height: 45vh;
-	padding: 55px 0 1px;
-}
-
-#services-header__container h1,
-#services-header__container p{
-	color: white;
-}
-
-#services-header__container{
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Raleway';
-	font-weight: 600;
-}
-
-#services-text__container{
-	padding: 20px 0;
-}
-
-#services-text__paragraph{
-	font-size: 1.5em;
-}
-
-#services-items{
-	padding-bottom: 20px;
-}
-
-#services-items__container h5{
-	text-align: center;
-}
-
-
-
-
-/* ========================================================================== */
-/* Contact */
-/* ========================================================================== */
-
-#contact-header{
-	padding: 55px 0 1px;
-	height: 40vh;
-}
-
-#contact-header__container{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	color: white;
+.service-wrapper {
 	position: relative;
+	/* border: 3px solid purple; */
+	height: 90vh;
+	margin-bottom: 8rem;
 }
 
-#contact-header__container{
-	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8)),
-	url('../img/Store-front.png') center center/cover;
+.sc-right {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
+	justify-content: flex-end;
 }
 
-.flex-container{
-	display: flex;
-	flex-wrap: wrap;
+
+/* parties content container */
+.service-text-container {
+	/* border: 3px solid orange; */
+	width: 75%;
+	position: relative;
+	background-color: white;
+	padding: 1.25rem;
 }
 
-#contact-information__container{
-	padding: 20px 0;
+.service-text-container h1 {
+	font-size: 5rem;
 }
 
-#contact-information__container .row{
-	height: 100%;
+.service-text-container p {
+	font-size: 2rem;
 }
 
-#contact-information__container .contact-information__text{
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Raleway';
-	font-weight: 600;
-}
-
-#contact-information__container .contact-information__text ul li{
-	font-size: 1.3em;
-}
-
-#map
-{
-	width:100%;
-	height:100%;
-}
-
-#google_map{
-	margin: 0 auto;
+.service-text-container::after {
+	content: ' ';
 	width: 100%;
-}
-
-
-/* =================================================================== */
-/* About */
-/* =================================================================== */
-
-#about-header{
-	height: 45vh;
-	padding: 55px 0 1px;
-}
-
-#about-header__image-container{
-	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0.8)), url("../img/About.jpeg") right center/cover no-repeat;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	height: 100%;
-	color: white;
+	background-color: var(--sbr-pink);
+	z-index: -2;
+	position: absolute;
+	bottom: -7rem;
+	right: -33rem;
 }
 
-#about-text__container h2{
-	padding: 15px 0;
-	text-align: center;
+.stc-right::after {
+	right: 33rem;
+}
+/* service img */
+.party-img {
+	background: url("../img/parties.jpg");
 }
 
-#about-text__container p{
-	padding-bottom: 5px;
+.catering-img {
+	background: url("../img/parties.jpg");
 }
 
-
-
-
-
-/* =================================================================== */
-/* MEDIA QUERIES */
-/* =================================================================== */
-
-/* Home Page Testimonials */
-@media only screen and (max-width: 1730px){
-	#testimonials{
-		height: 48vh;
-	}
+.custom-orders-img {
+	background: url("../img/parties.jpg");
 }
 
-
-
-/* Home Page Services seciton */
-@media only screen and (max-width: 992px){
-	
-	#testimonials{
-		display: none;
-	}
-
-	#services .row{
-		padding: 10px 0;
-	}
-
-	#services .row:nth-child(1){
-		padding: 20px 0 10px 0;
-	}
-
-	#services .row:nth-child(4){
-		padding: 10px 0 20px 0;
-	}
-	
-	#services .services__text-container{
-		padding: 0;
-		width: 100%;
-		height: 50vh;
-	}
-
-	#wine-taste__text{
-		background: linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
-		url('../img/Wine\ Taste.png') center center/cover;
-	}
-
-	#beer-taste__text{
-		background:  linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
-		url('../img/Beer\ Taste.png') center center/cover;
-	}
-
-	#lunch__text{
-		background:  linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
-		url('../img/Sandwhich\ and\ Beer.png') center center/cover;
-	}
-
-	#coffee__text{
-		background:  linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),
-		url('../img/Coffee\ and\ Pastries.png') center center/cover;
-	}
-
-	#wine-taste__text h2,
-	#beer-taste__text h2,
-	#lunch__text h2,
-	#coffee__text h2{
-		color: white;
-	}
-
-	#services .services__text-container div p{
-		color: white;
-		padding: 0 10px;
-	}
-
-	#services .services__image-container{
-		display: none;
-	}
-
-	/* Services Page*/
-	#services-text{
-		margin-bottom: 30px;
-		padding: 0 12px;
-	}
-
-	#services-items{
-		margin-bottom: 30px;
-	
-	}
+.service-img {
+	height: min(40rem, 40vw);
+	width: 60rem;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
 }
 
-/* Menus Tab content */
-@media(min-width: 768px){
-	#services-items{
-		height: 40vh;
-	}
-
-	#services-items__contianer{
-		height: 30vh;
-	}
-
-	#services-items__contianer.card{
-		height: 30vh;
-	}
-
+.svi-left {
+	left:0;
 }
-
-@media(max-width: 557px){
-	#menus{
-		display: block;
-	}
-}
-
-@media(max-width: 320px){
-
-	#wine-taste__text div h2,
-	#beer-taste__text div h2,
-	#lunch__text div h2,
-	#coffee__text div h2{
-		margin-bottom: 20px;
-	}
-
-	.home__services-text{
-		display: none;
-	}
-
-}
-
